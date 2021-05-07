@@ -29,7 +29,7 @@ class CotizacionFactory extends Factory
             // 'notCompany'  =>$this->faker->boolean(),
             'phone'         =>$this->faker->randomNumber(9),
             'city'          =>$this->faker->text(10),
-            'postalCode'    =>$this->faker->text(20),
+            'postalCode'    =>$this->faker->randomNumber(5),
             'comments'      =>$this->faker->text(30),
             'total'         =>$this->faker->randomNumber(4),
         ];

@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class Cotizacion extends JsonResource
+class CotizacionResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -16,15 +16,15 @@ class Cotizacion extends JsonResource
     {
         return [
             'id'            =>$this->id,
-            'Name'          =>$this->Name,
-            'FirtsName'     =>$this->FirtsName,
-            'CantProduct'   =>$this->CantProduct,
-            'Phone'         =>$this->Phone,
-            'Company'       =>$this->Company,
-            'City'          =>$this->City,                                              
-            'PostalCode'    =>$this->PostalCode,
-            'Comments'      =>$this->Comments,
-            'Total'         =>$this->Total
+            'name'          =>$this->name,
+            'firtsName'     =>$this->firtsName,
+            'cantProduct'   =>$this->cantProduct,
+            'phone'         =>$this->phone,
+            'company'       =>$this->company,
+            'city'          =>$this->city,                                              
+            'postalCode'    =>$this->postalCode,
+            'comments'      =>$this->comments,
+            'total'         =>$this->total
 
         ];
     }

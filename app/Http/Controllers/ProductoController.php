@@ -18,7 +18,7 @@ class ProductoController extends Controller
     {
         // return new ProductoCollection(producto::all());
         $productos = Producto::all();
-            return  $productos;
+            return response()->json($productos, 200);
     }
 
     /**

@@ -22,7 +22,7 @@ class Producto extends Model
         'Total'
     ];
 
-
+    protected $hidden = ['created_at', ' updated_at'];
     /*
     Codigo de prueba par0a manipular mis datos
     */

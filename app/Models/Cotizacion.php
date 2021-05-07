@@ -9,14 +9,16 @@ class Cotizacion extends Model
 {
     use HasFactory;
     protected $fillable=[
-        'Name',
-        'FirtsName',
-        'CantProduct',
-        'Phone',
-        'Company',
-        'City',
-        'PostalCode',
-        'Comments',
-        'Total'
+        'name',
+        'firtsName',
+        'cantProduct',
+        'phone',
+        'company',
+        'city',
+        'postalCode',
+        'comments',
+        'total'
     ];
+
+    protected $hidden = ['created_at', ' updated_at'];
 }

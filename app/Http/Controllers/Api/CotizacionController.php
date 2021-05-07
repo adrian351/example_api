@@ -6,9 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Models\Cotizacion;
 use Illuminate\Http\Request;
 
-use App\Http\Resources\Cotizacion as CotizacionResource;
+use App\Http\Resources\CotizacionResource;
 
-use App\Http\Requests\Cotizacion as CotizacionRequest;
+// use App\Http\Requests\Cotizacion as CotizacionRequest;
 use App\Http\Resources\CotizacionCollection;
 
 class CotizacionController extends Controller
@@ -39,7 +39,7 @@ class CotizacionController extends Controller
         return response()->json(Cotizacion::all());
 
         $cotizacion = Cotizacion::all();
-        return $cotizacion;
+        return response()->json(['status'=>'ok','data'=>$cotizacion], 200);
     }
 
     /**
@@ -48,10 +48,26 @@ class CotizacionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CotizacionRequest $request)
+    public function store(Request $request)
     {
+        // $cotizacion = new Cotizacion();
+        // $cotizacion -> name = $request->name;
+        // $cotizacion -> firtsName = $request->firtsName;
+        // $cotizacion -> city = $request->city;
+        // $cotizacion -> company = $request->company;
+        // $cotizacion -> postalCode = $request->postalCode;
+        // $cotizacion -> phone = $request->phone; 
+        // $cotizacion -> cantProduct = $request->cantProduct;
+        // $cotizacion -> comments = $request->comments;
+        // $cotizacion -> total = $request->total;
+        
+
+        // $cotizacion->save();
+
+
         $cotizacion = $this->cotizacion->create($request->all());
         return response()->json(new CotizacionResource($cotizacion), 201);
+                                                   
     }
 
     /**
@@ -72,7 +88,7 @@ class CotizacionController extends Controller
      * @param  \App\Models\Cotizacion  $cotizacion
      * @return \Illuminate\Http\Response
      */
-    public function update(CotizacionRequest $request, Cotizacion $cotizacion)
+    public function update(Request $request, Cotizacion $cotizacion)
     {
         $cotizacion->update($request->all());
 

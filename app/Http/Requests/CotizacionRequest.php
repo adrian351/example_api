@@ -24,15 +24,15 @@ class Cotizacion extends FormRequest
     public function rules()
     {
         return [
-            'Name',
-            'CantProduct'   => 'required',
-            'FirtsName',
-            'Phone',
-            'Company',
-            'City'          => 'required',
-            'PostalCode'    =>  'required',
-            'Comments',
-            'Total'
+            'name',
+            'cantProduct',
+            'firtsName',
+            'phone',
+            'company',
+            'city',
+            'postalCode',
+            'comments',
+            'total'
         ];
     }
 }

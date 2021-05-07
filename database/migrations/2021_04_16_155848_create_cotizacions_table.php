@@ -15,7 +15,7 @@ class CreateCotizacionsTable extends Migration
     {
         Schema::create('cotizacions', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 50);
+            $table->string('name', 20);
             $table->string('firtsName', 50);
             $table->string('cantProduct'); 
             $table->string('company', 100)->nullable();
