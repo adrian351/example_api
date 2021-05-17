@@ -23,6 +23,7 @@ class User extends Authenticatable implements JWTSubject
         'phone_number',
         'email',
         'password',
+        'passwordRepeat'
     ];
 
     /**
@@ -31,6 +32,7 @@ class User extends Authenticatable implements JWTSubject
      * @var array
      */
     protected $hidden = [
+        // 'name',
         'password',
         'remember_token',
     ];
